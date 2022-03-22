@@ -1,0 +1,19 @@
+#jalview instructions (after download) 
+
+Go to file -> fetch sequences -> uniprot --> retrieve IDs (paste in list of ids).  Then align with clustalW,  then make the tree (blosum 62).  Then color by clustal x.  To flip the tree, hit the node. 
+
+FYI: Tried by muscle, but didn’t segregate by IPR 
+
+#A0A1C7H380
+A0A076IMG8
+A0A076IRG9
+A0A076IXU4
+C7H1G6
+I9R3P9
+A0A0P0M2W7
+U2QX51
+R6TIX3
+R6CZ24
+R5CY66
+T5S060
+

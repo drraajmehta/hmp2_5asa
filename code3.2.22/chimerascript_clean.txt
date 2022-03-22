@@ -1,0 +1,31 @@
+open 2PFR #nat
+open 7CW4 #acoa
+focus
+delete :.b
+focus
+preset apply int 1
+~disp
+color orange red #0
+color cornflower blue #1
+background solid white
+alias site1 #0:68,107,122
+alias site2 #1:88,349,379
+alias both site1 | site2
+disp both
+swapaa asp #1:379.a
+swapaa cys #1:379.a
+color byhet
+set subdivision 10
+transparency 75,r
+set flatTransparency
+repr wire @ca
+savepos closeup
+move x -25 models #0
+move x 30 models #1
+savepos sidebyside
+#use 2D Labels to label the residues.
+scene sceneB save
+scene sceneB_2 save
+scene sceneA save
+
+https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/tutorials/convergent.html

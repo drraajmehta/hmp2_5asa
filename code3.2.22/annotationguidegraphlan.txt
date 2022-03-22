@@ -1,0 +1,63 @@
+Actinobacteria	clade_marker_color	b						
+Actinobacteria	annotation	Actinobacteria						
+Actinobacteria	annotation_background_color	b						
+Bacteroidetes	annotation	Bacteroidetes						
+Firmicutes	clade_marker_color	g						
+Firmicutes	annotation	Firmicutes						
+Firmicutes	annotation_background_color	g						
+Proteobacteria	clade_marker_color	r						
+Proteobacteria	annotation	Proteobacteria						
+Proteobacteria	annotation_background_color	r						
+Verrucomicrobia	annotation	Verrucomicrobia						
+Verrucomicrobia	annotation_background_color	m						
+Verrucomicrobia	clade_marker_color	m						
+								
+								
+Akkermansia_muciniphila	clade_marker_color	#0080FF	-0.028304778					
+Dialister_invisus	clade_marker_color	#0080FF	-0.010121786					
+Fusicatenibacter_saccharivorans	clade_marker_color	#0080FF	-0.026263482					
+Intestinimonas_butyriciproducens	clade_marker_color	#0080FF	-0.011799701					
+Lachnospira_pectinoschiza	clade_marker_color	#0080FF	-0.029951673					
+Parasutterella_excrementihominis	clade_marker_color	#0080FF	-0.017101749					
+Phascolarctobacterium_faecium	clade_marker_color	#0080FF	-0.01403758					
+Proteobacteria_bacterium_CAG_139	clade_marker_color	#0080FF	-0.010206492					
+Roseburia_inulinivorans	clade_marker_color	#0080FF	-0.017900019					
+Ruminococcus_bromii	clade_marker_color	#0080FF	-0.020838528					
+Ruthenibacterium_lactatiformans	clade_marker_color	#0080FF	-0.011230168					
+Anaerotignum_lactatifermentans	clade_marker_color	#99FFFF	-0.007745512					
+Anaerotruncus_colihominis	clade_marker_color	#99FFFF	-0.004139281					
+Bilophila_wadsworthia	clade_marker_color	#99FFFF	-0.006991598					
+Butyricimonas_synergistica	clade_marker_color	#99FFFF	-0.004863616					
+Gemmiger_formicilis	clade_marker_color	#99FFFF	-0.005178546					
+Lactobacillus_rogosae	clade_marker_color	#99FFFF	-0.004610134					
+Paraprevotella_xylaniphila	clade_marker_color	#99FFFF	-0.008148109					
+Turicimonas_muris	clade_marker_color	#99FFFF	-0.005497862					
+Dielma_fastidiosa	clade_marker_color	#FF9933	0.005455503					
+Anaerostipes_hadrus	clade_marker_color	#CC6600	0.021855753					
+Bifidobacterium_longum	clade_marker_color	#CC6601	0.024185338					
+Eubacterium_eligens	clade_marker_color	#CC6602	0.03230457					
+Faecalibacterium_prausnitzii	clade_marker_color	#CC6603	0.077468743					
+Lachnospira_pectinoschiza	clade_marker_size	40						
+Akkermansia_muciniphila	clade_marker_size	40						
+Fusicatenibacter_saccharivorans	clade_marker_size	40						
+Ruminococcus_bromii	clade_marker_size	40						
+Roseburia_inulinivorans	clade_marker_size	40						
+Parasutterella_excrementihominis	clade_marker_size	40						color key
+Phascolarctobacterium_faecium	clade_marker_size	40					#0080FF	<-0.01
+Intestinimonas_butyriciproducens	clade_marker_size	40					#99FFFF	"""-0.01-0"""
+Ruthenibacterium_lactatiformans	clade_marker_size	40					#FF9933	0-0.01
+Proteobacteria_bacterium_CAG_139	clade_marker_size	40					#CC6600	>0.01
+Dialister_invisus	clade_marker_size	40						
+Paraprevotella_xylaniphila	clade_marker_size	40						
+Anaerotignum_lactatifermentans	clade_marker_size	40						
+Bilophila_wadsworthia	clade_marker_size	40						
+Turicimonas_muris	clade_marker_size	40						
+Gemmiger_formicilis	clade_marker_size	40						
+Butyricimonas_synergistica	clade_marker_size	40						
+Lactobacillus_rogosae	clade_marker_size	40						
+Anaerotruncus_colihominis	clade_marker_size	40						
+Dielma_fastidiosa	clade_marker_size	40						
+Anaerostipes_hadrus	clade_marker_size	40						
+Bifidobacterium_longum	clade_marker_size	40						
+Eubacterium_eligens	clade_marker_size	40						
+Faecalibacterium_prausnitzii	clade_marker_size	40						

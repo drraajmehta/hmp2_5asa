@@ -1,0 +1,36 @@
+#tools -> open command line 
+
+open 2PFR #nat
+open 4N45 #acoa
+focus
+delete :.b
+focus
+preset apply int 1
+~disp
+color orange red #0
+color cornflower blue #1
+background solid white
+alias site1 #0:68,107,122
+alias site2 #1:88,348,378
+alias both site1 | site2
+disp both
+swapaa asp #1:378.a     ####--> this allows superimposition of active sites 
+match iterate 2.0 site2 site1
+swapaa cys #1:378.a
+color byhet
+set subdivision 10
+transparency 85,r
+set flatTransparency
+repr wire @ca
+#The ribbon dimensions can be adjusted in Ribbon Style Editor. Start that tool (under Tools... Depiction in the menu) and adjust the Ribbon Scaling values:
+savepos closeup
+move x -25 models #0
+move x 30 models #1
+focus
+savepos sidebyside
+#use 2D Labels to label the residues. #font 48
+scene sceneB save
+scene sceneB_2 save
+scene sceneA save
+
+https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/tutorials/convergent.html
