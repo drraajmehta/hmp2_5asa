@@ -1,7 +1,7 @@
 # hmp2_5asa
 R/python/unix scripts for 5-ASA analysis 
 
-##### READ ME FOR FILES ##### --> contact rmehta2@mgh.harvard.edu or raajmehta@gmail.com with questions. 
+##### READ ME FOR FILES --> see folder 12.20.22 ##### --> contact rmehta2@mgh.harvard.edu or raajmehta@gmail.com with questions. 
 
 #Data processing:
 - metadata_create.R		
