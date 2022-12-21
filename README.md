@@ -1,7 +1,7 @@
 # hmp2_5asa
 R/python/unix scripts for 5-ASA analysis 
 
-##### READ ME FOR FILES #####
+##### READ ME FOR FILES ##### --> contact rmehta2@mgh.harvard.edu or raajmehta@gmail.com with questions. 
 
 #Data processing:
 - metadata_create.R		
@@ -12,38 +12,38 @@ R/python/unix scripts for 5-ASA analysis
 
 #Overview (results, section 1):
 - table1_v3.R		
-- 5ASAfigsv5.pptx		 
+- icons come from shutterstock (free)
 
 #Metabolomics analysis (results, section 2): 
-- metabPCOA_clean.R 		
-- DA_test_species.R 		
-- graphlan_prep 		  
-- graphlan_1217fileforplot.txt 	
-- ROCmetabs_newclean.R 		
-- hallaprep_clean.R		   -
-- hallabb3.py 			 
-- biotransf_clean.R		
-- prismmetab_reviewed.R 	
-- metabs_newuserextra.R 
-- chemdraw was used to make the structures 
+- metabPCOA_clean.R 		--> Fig2A 
+- DA_test_species.R 		--> supp table 3 
+- ROCmetabs_newclean.R 	--> Fig2B, Supp Fig 1, Ext Fig 2, 3c/3d, Supp table 2 
+- hallabb3.py 			--> ext fig 3b  (done on FAS bc software is installed there)
+- biotransf_clean.R		--> Fig2C , Ext Fig 3 
+- prismmetab_reviewed.R 	--> Fig 2C , Supp Fig 2 
+- metabs_newuserextra.R --> this is info for text about new steroid and new biologic users 
+#NB: chemdraw was used to make the structures 
 
 #Gene discovery (results, section 3): 
-- DA_test_uniref_clean.R
-- sen_spec_clean		
-- jalview.txt			
-- 5ASAfigsv5.ppt	
-
-- diamond3.sh			
-- diamondoverlap.R	
-
-
+- DA_test_uniref_clean.R --> fig 3a, 3c
+- sen_spec_clean		--> Fig 3b
+- jalview.txt	--> Fig 3d 		
+- proteobacteriaplot.R --> ext fig 4
+- proteoheatmap.R --> ext fig 4
+- graphlanprep_revision2.R --> ext fig 4
+ 
 #Biochemistry (results, section 4): 
 - genecontext.R 		
 - proteindomains.R
-- chimerascript2.txt		
-
+- chimerascript8.txt  --> Fig 4c,d,e
 - chemdraw was used to make structures
-- jared made panels 4a,b,c supp fig 11 in illustrator 
+- jared made panels 4a,b, ext fig 6,7  
 
 #Clinical (results, section 5): 
-- clinical_clean.R		
+- clinical_clean.R	--> Fig 5a, 5c
+- sparcvalidation_final.R --> Fig 5b
+
+
+
+
+
