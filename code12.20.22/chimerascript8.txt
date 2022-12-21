@@ -1,0 +1,126 @@
+#tools -> open command line 
+
+### manual ## 
+
+#present tetrahedral cage for structure 
+#=======================================#
+#open firmicutescag structure
+delete :.e
+delete :.f
+delete :.g
+delete :.h
+focus
+preset apply int 1
+~disp
+background solid white
+#select chains and change color 
+#save at 600dpi 
+
+#overlap crystal with acetylated monomer (in complex with acetyl CoA) from Zoogloea ramigera (P07097|THIL_SHIZO); uniprot 52.94%
+#=======================================#
+#open firmicutescag structure
+delete :.b
+delete :.c
+delete :.d
+delete :.e
+delete :.f
+delete :.g
+delete :.h
+open 1DM3
+focus
+delete :.b
+delete :.c
+delete :.d
+focus
+background solid white
+#tools -> matchmaker -> best-aligning pair of chains -> Needleman-Wunsch, BLOSUM 62
+set subdivision 10
+transparency 15,r
+set flatTransparency
+repr wire @ca
+
+
+color orange red #0
+color medium blue #1
+color acetyl coa green
+
+#save as XX.png for SI with transparency,
+
+#show the same active sites#########
+alias site1 #0:90,375,406
+alias site2 #1:89,348,378
+alias both site1 | site2
+disp both
+color delete the other residues and all the water
+transparency 90,r
+scene sceneAf save
+#save as XX.png without transparency option, might need to go to inkscape and convert to PDF with shrunk page limits, and then import into Fig4_natmed_rev
+
+#overlap acetylated crystal with Salmonella NAT uniprot 
+#=======================================#
+open 1E2T #nat
+focus
+delete :.b
+delete :.c 
+delete :.d 
+delete :.e 
+delete :.f 
+delete :.g 
+delete :.h
+#open fcag file 
+focus
+delete :.b
+delete :.c 
+delete :.d 
+delete :.e 
+delete :.f 
+delete :.g 
+delete :.h
+focus
+preset apply int 1
+~disp
+color orange red #1
+color goldenrod #0
+background solid white
+alias site1 #0:69,107,122
+alias site2 #1:90,375,406
+alias both site1 | site2
+disp both
+swapaa asp #1:406     ####--> this allows superimposition of active sites 
+#delete waters
+match iterate 2.0 site2 site1
+swapaa cys #1:406
+color byhet
+set subdivision 10
+transparency 90,r
+set flatTransparency
+repr wire @ca
+#The ribbon dimensions can be adjusted in Ribbon Style Editor. Start that tool (under Tools... Depiction in the menu) and adjust the Ribbon Scaling values:
+savepos closeup
+#use 2D Labels to label the residues. #font 48
+scene sceneAf save
+#file save as png with transparency option 
+
+
+
+#Movement Mouse Mode, a tool in the Structure Editing and Movement categories.
+#hide all water (solvent), hide other amino acids 
+
+background solid white
+transparency 70,r
+set flatTransparency
+repr wire @ca
+color byhet
+color none #1
+color orange red #0
+
+save as pdb (ligand) for docking 
+
+
+	delete other atoms 
+merge over acetyl CoA 
+
+select acetyl coa, up arrow, delete 
+
+
+
