@@ -28,7 +28,7 @@ dim(chunk1) #1902184     214
 
 
 #remove features with lt 1e-8 in 10% of samples 
-chunk2 <- chunk1[ rowSums(chunk1 >= 0.00000001 ) >= 20, ]
+chunk2 <- chunk1[ rowSums(chunk1 >= 0.00000001 ) >= 20, ] 
 dim(chunk2) 
 # 379036    214
 write.table(chunk2, file="DNAunirefproptable2.txt", sep="\t", quote=FALSE,row.names=FALSE)
