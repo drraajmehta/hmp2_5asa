@@ -1,4 +1,4 @@
-##### diamond overlap --> see /n/home02/rmehta/diamond4_5asa_hsph.sh in the cannon cluster ####
+##### diamond overlap --> see /n/home02/rmehta/diamond4_5asa_hsph.sh in the cannon cluster #### 
 
 library(stringr)
 library(dplyr)
