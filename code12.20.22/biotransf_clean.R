@@ -1,13 +1,13 @@
 ######################################################################################################
-# R programs for creating "metabolite" plots for part 2				#
-# ============================================					#
+# R programs for creating "metabolite" plots for part 2				          #
+# ============================================					                 #
 # Purposes:  user v non user boxplots,    					#
 #            							#
 ######################################################################################################
 
 #references: 
 #https://www.genome.jp/kegg-bin/show_pathway?map00760+C05380
-#Am J Health-Syst Pharm—Vol 60 Jul 1, 2003 Suppl 2
+#Am J Health-Syst Pharmâ€”Vol 60 Jul 1, 2003 Suppl 2
 #structures made in chemdraw https://chemdrawdirect.perkinelmer.cloud/js/sample/index.html#
 
 library(ggplot2)
