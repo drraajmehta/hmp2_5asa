@@ -5,7 +5,6 @@ library(purrr)
 #library(table1) 
 library(tidyr)
 library(magrittr)
-#library(sm) 
 library(ggplot2)
 library(corrplot)
 ##### the purpose of this file is to determine add'l info about the new users for data in the text #####
