@@ -309,7 +309,7 @@ ccfmeta2 <- inner_join(ccfmeta,followuptime, by="unique")
 afterusers <- ccfmeta2 %>% filter(grepl('After', CORTICOSTEROIDS_EMR)) #not all after users have time data available 
 
 library(tidyr)
-median(extract_numeric(afterusers$CORTICOSTEROIDS_EMR ))
+median(extract_numeric(afterusers$CORTICOSTEROIDS_EMR )) 
 IQR(extract_numeric(afterusers$CORTICOSTEROIDS_EMR ))
 
 ####duplicates (to identify those to subset above)
