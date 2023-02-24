@@ -142,12 +142,6 @@ dim(df_steroids) #--> 609 samples
 ### OUTCOME: STEROIDS ####
 ##########################
 
-#univariate analysis (sensitivity)  
-##########################################################################
-fu <-glm(steroids~ UniRef90_C7H1G6 , data=df_steroids, family=binomial) #stronger
-hu <-glm(steroids~ UniRef90_R5CY66 , data=df_steroids, family=binomial) #stronger
-iu <-glm(steroids~ UniRef90_R6CZ24 , data=df_steroids, family=binomial) #stronger
-ku <-glm(steroids~ UniRef90_T5S060 , data=df_steroids, family=binomial) #interesting this was null 
 
 #MV analysis (without host genetics) #NB: (!) means neg ass'n # means null 
 ##########################################################################
@@ -223,7 +217,7 @@ df_steroids_ever3$acetylhost <- relevel(df_steroids_ever3$acetylhost, ref = "slo
 Prop <- c(14,25)
 pie(Prop , labels = c("38%, Fast","62%, Slow"))
 
-#ever steroids vs single exposure (sensitivity) + baseline microbe prediction ==> these are NULL, maybe discouraging, but see mixed effects model below  
+#ever steroids vs single exposure (sensitivity) + baseline microbe prediction ==> these are NULL, but see mixed effects model below  
 ##########################################################################################################################################################
 summary(glm(steroid_ever~ acetylhost + consent_age + sex + smoking.status + diagnosis.x, data=df_steroids_ever3, family=binomial)) # this is null  n=39
 # > acetylhostfast      1.612e+00  1.056e+00   1.527   0.1267
@@ -540,51 +534,6 @@ ggsave(filename='/home/rsm34/5asabb3/submission/figures/fig5a.png', plot=pq , wi
 
 
 #4.5 x 6
-### SCORE PANEL SUPP? ######
-RR_data2 <- RR_data[8:12,]
-
-RR_data2$Uniref <- factor(RR_data2$Uniref , levels=c("Zero (n=269)", "One (n=158)", "Two (n=114)","Three (n=49)","Four (n=19)"))
-
-
-pq3 = ggplot(data=RR_data2, aes(x = Uniref))+ geom_pointrange(aes(y = RiskRatio, ymin = LowerLimit, ymax = UpperLimit),size=1.5,color="black",fill="firebrick3",shape=22)+
-    geom_hline(yintercept =1, linetype=2)+
-    xlab('Number of genes')+
-    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-    panel.background = element_blank(), axis.line = element_line(colour = "black"))  +
-    scale_y_continuous(name = "Odds Ratio (95% Confidence Interval)",expand = expansion(mult = c(0.25, 0))) + 
-    geom_text(aes(y = RiskRatio, label = round(RiskRatio,2)),hjust=0,vjust=1,nudge_x=0.2,size=4) +
-    #scale_x_continuous(expand = expansion(mult = c(0.05, .1)),breaks=c(0,1,2,3,4,5),labels=RR_data$Group) + 
-    theme(axis.text.x = element_text(size=11),axis.text.y = element_text(size=11),axis.text=element_text(size=11), axis.title.x = element_text(size=12), axis.title.y = element_text(size=12))+coord_cartesian(ylim=c(0, 23))
-pq3
-
-
-
-### PANEL C --> will probably nix ######
-
-
-RR_data3 <- RR_data[c(13:14),]
-
-pq3 = ggplot(data=RR_data3, aes(x = Uniref))+ geom_pointrange(aes(y = RiskRatio, ymin = LowerLimit, ymax = UpperLimit),size=1.5,color="black",fill="firebrick",shape=22)+
-    geom_hline(yintercept =1, linetype=2)+
-    xlab('')+
-    theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank(),
-    panel.background = element_blank(), axis.line = element_line(colour = "black"))  +
-    scale_y_continuous(name = "Odds Ratio (95% Confidence Interval)",expand = expansion(mult = c(0.25, 0))) + 
-    geom_text(aes(y = RiskRatio, label = round(RiskRatio,2)),hjust=0,vjust=1,nudge_x=0.2,size=4) +
-    #scale_x_continuous(expand = expansion(mult = c(0.05, .1)),breaks=c(0,1,2,3,4,5),labels=RR_data$Group) + 
-    theme(axis.text.x = element_text(size=11),axis.text.y = element_text(size=11),axis.text=element_text(size=11), axis.title.x = element_text(size=12), axis.title.y = element_text(size=12))+coord_cartesian(ylim=c(0, 17.6))
-pq3
-
-#possibly to accompany panel C
-#68 "fast" 541 "slow" as above 
-prop_bugs <- c(68,541)
-pie(prop_bugs, labels = c("11% (n=68),\n Fast","89% (n=541),\n Slow"))
-
-#14 fast,25 slow
-Prop <- c(14,25)
-pie(Prop , labels = c("36% (n=14), Fast","64% (n=25), Slow"))
-
-
 ################################################# PANEL B: get proportions of presence /absence genes ######################
 
 
@@ -601,21 +550,3 @@ pq4
 ggsave(filename='/home/rsm34/5asabb3/submission/figures/fig5b.png', plot=pq4 , width = 7, height = 5, dpi = 600) 
 
 
-####### PANEL D??? ###############
-
-combined_prop$C7H1G6num <- (as.numeric(combined_prop$UniRef90_C7H1G6)-1)
-combined_prop$R5CY66num <- (as.numeric(combined_prop$UniRef90_R5CY66)-1)
-combined_prop$R6CZ24num <- (as.numeric(combined_prop$UniRef90_R6CZ24)-1)
-combined_prop$T5S060num <- (as.numeric(combined_prop$UniRef90_T5S060)-1)
-
-combined_prop$score <- apply(combined_prop[,c(9:12)], 1, sum) 
-combined_prop$score2 <- as.factor(combined_prop$score)
-
-combined_prop <- combined_prop %>% arrange(desc(score))
-
-testy <- ggplot(data=combined_prop, aes(x=reorder(SampleID, -as.numeric(steroids)), y=score, color=steroids)) +facet_wrap(~score2) + geom_bar(stat="identity") + scale_fill_discrete() + theme_cowplot() + expand_limits(y=c(0, 4)) +  ylab("Gene numbers") +
-  theme(axis.title.x=element_blank(),
-        axis.text.x=element_blank(),
-        axis.ticks.x=element_blank())
-
-ggsave(filename='/home/rsm34/5asabb3/submission/figures/fig5d.png', plot=testy , width = 7, height = 4, dpi = 600) 
