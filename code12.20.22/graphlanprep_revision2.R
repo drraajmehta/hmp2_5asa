@@ -2,7 +2,7 @@ library(dplyr)
 
 #read in simmer data 
 ########################
-#read in the SPECIES file after pre-processing script made it (1632 --> n=1464)
+#read in the SPECIES file after pre-processing script made it (1632 --> n=1464) 
 simmerdata <- read.table("/home/rsm34/5asabb3/reviews/keyfiles/DM1_enzyme_predictions.txt",header=T,sep="\t")
 
 simmerdata$Lineage <- gsub(".*p__","",simmerdata$Lineage)
