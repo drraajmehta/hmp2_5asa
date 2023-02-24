@@ -103,24 +103,4 @@ scene sceneAf save
 
 
 
-#Movement Mouse Mode, a tool in the Structure Editing and Movement categories.
-#hide all water (solvent), hide other amino acids 
-
-background solid white
-transparency 70,r
-set flatTransparency
-repr wire @ca
-color byhet
-color none #1
-color orange red #0
-
-save as pdb (ligand) for docking 
-
-
-	delete other atoms 
-merge over acetyl CoA 
-
-select acetyl coa, up arrow, delete 
-
-
 
