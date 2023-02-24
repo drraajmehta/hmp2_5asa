@@ -1,8 +1,8 @@
 ######################################################################################################
-# R programs for creating "metabolite" plots					#
-# ============================================					#
-# Purposes:  new use boxplots,    						#
-#              networks, identificaiton of unannotated compounds, r2 parsing		#
+# R programs for creating "metabolite" plots								#
+# ============================================								#
+# Purposes:  new use boxplots,    									#
+#              networks, identificaiton of unannotated compounds, r2 parsing				#
 ######################################################################################################
 
 #references: 
