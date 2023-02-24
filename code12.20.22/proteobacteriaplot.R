@@ -52,4 +52,4 @@ pp<-phylum_gather %>%
  theme( axis.text.x = element_blank(), axis.ticks = element_blank())
 
 
-ggsave(filename='./protoplot.png', plot=pp , width = 6, height = 4, dpi = 600)
+ggsave(filename='./protoplot.png', plot=pp , width = 6, height = 4, dpi = 600) 
