@@ -1,5 +1,5 @@
 $grep 'Escherichia\|freundii\|amalonaticus\|_pneumoniae\|oxytoca\|morganii' /home/rsm34/5asabb3/archive/DNA_uniref/dna_merge_genefams.txt > protomgx.txt
-$grep 'Escherichia\|freundii\|amalonaticus\|_pneumoniae\|oxytoca\|morganii' /home/rsm34/5asabb3/archive/RNA_uniref/rna_merge_genefams.txt > protomtx.txt
+$grep 'Escherichia\|freundii\|amalonaticus\|_pneumoniae\|oxytoca\|morganii' /home/rsm34/5asabb3/archive/RNA_uniref/rna_merge_genefams.txt > protomtx.txt 
 
 
 
