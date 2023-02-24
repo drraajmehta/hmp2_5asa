@@ -111,4 +111,4 @@ p3 = ggplot(pcoa,aes(x=PC1, y=PC2)) + geom_point(shape=21,aes(fill=diagnosis2),s
    theme_cowplot(16) + labs(fill="5-ASA use by Dx") + ylab("PCoA2, 8.2%") + xlab("PCoA1, 10.4%") + scale_colour_manual(values=c("black","black"),guide=FALSE) 
 #p3
 
-ggsave(filename='/home/rsm34/5asabb3/submission/figures/fig2a.png', plot=p3, width = 7.5, height = 6, dpi = 600) 
+ggsave(filename='/home/rsm34/5asabb3/submission/figures/fig2a.png', plot=p3, width = 7.5, height = 6, dpi = 600)  
