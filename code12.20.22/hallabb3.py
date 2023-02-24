@@ -13,4 +13,4 @@ hallagram \
     -n 20 \
     --block_border_width 2
 
-hallagnostic -i specmetab_bb3/
+hallagnostic -i specmetab_bb3/ 
