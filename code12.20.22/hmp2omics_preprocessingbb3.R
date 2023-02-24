@@ -16,7 +16,7 @@ $ cat column.header speciesprecursor1.tsv > speciesprecursor2.tsv
 $ grep -v "Vir" speciesprecursor2.tsv > speciesprecursor3.txt
 $ grep -v "|t__" speciesprecursor3.txt > metaphlan_species.txt
 
-# remove taxa with relative abundance below 1e-4 in at least 10 % samples --> R (stopped here)
+# remove taxa with relative abundance below 1e-4 in at least 10 % samples --> R 
 metaphlan_species <- read.table("/home/rsm34/5asabb3/archive/metaphlan_species.txt", header=T, sep="\t")
 metaphlan_species2 <- metaphlan_species[ rowSums(metaphlan_species >= 0.0001 ) >= 150, ]
 dim(metaphlan_species2)
