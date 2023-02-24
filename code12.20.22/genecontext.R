@@ -5,7 +5,7 @@ context <- read.table("genecontext_all3.txt",header=T,sep="\t")
 context$molecule<- gsub("n(", "\n(", context$molecule,fixed=TRUE)
 
 
-#NB the file above was made in excel, from combing through yancongs data 
+#NB the file above was made in excel, from combing through yancongs data from ncbi genomes 
 
 
 ggplot(context , aes(xmin = start, xmax = end, y = molecule, fill = gene, 
